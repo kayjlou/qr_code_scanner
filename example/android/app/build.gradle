@@ -26,7 +26,8 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdk 33
+    compileSdkVersion 32
+    namespace = 'net.touchcapture.qr.flutterqr'
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -36,7 +37,7 @@ android {
         applicationId "net.touchcapture.qr.flutterqrexample"
         // minSdkVersion is determined by Native View.
         minSdkVersion 20
-        targetSdkVersion 33
+        targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -48,7 +49,6 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-    namespace 'net.touchcapture.qr.flutterqrexample'
 }
 
 flutter {
